@@ -12,7 +12,7 @@
 ---
 
 ### Overview
-For this project, a deep learning model is trained with images across four different types of soil: **Alluvial**, **Black**, **Clay**, and **Red**. 
+For this project, a deep learning model is trained with images across four different types of soil: **Alluvial**, **Black**, **Invalid**, **Clay**, and **Red**. 
 
 Based on the classified type of soil, suitable crop suggestions are provided to help optimize crop yields.
 
