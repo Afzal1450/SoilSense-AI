@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Result - Red Soil (செம்மண்) | SoilSense AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Tamil', sans-serif;
+      background: radial-gradient(circle at 50% -20%, #15803d 0%, #052e16 35%, #022c22 100%);
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .glass-nav {
+      background: rgba(5, 46, 22, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-effect { box-shadow: 0 0 50px -10px rgba(34, 197, 94, 0.25); }
+  </style>
+</head>
+<body class="text-slate-100 flex flex-col justify-between antialiased">
+
+  <nav class="glass-nav sticky top-0 z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-green-300 flex items-center justify-center text-emerald-950 font-bold shadow-lg shadow-emerald-500/20">
+          <i data-lucide="sprout" class="w-6 h-6"></i>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-emerald-400 bg-clip-text text-transparent">
+          SoilSense <span class="text-emerald-400 font-light">AI</span>
+        </span>
+      </a>
+      <a href="/" class="px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-200 border border-white/10 transition-all flex items-center gap-2">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> New Analysis (புதிய சோதனை)
+      </a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full space-y-8">
+    <div class="glass-card rounded-3xl p-6 md:p-8 glow-effect flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-l-4 border-l-emerald-400">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> AI Detection Complete (AI கண்டறிதல் முடிந்தது)
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white">
+          Red Soil <span class="text-emerald-400 font-normal">(செம்மண்)</span>
+        </h1>
+        <p class="text-slate-300 text-sm md:text-base max-w-2xl">
+          High iron content giving it a reddish tint. Highly porous structure with great drainage, requiring good irrigation.
+          <br><span class="text-emerald-300 text-xs">அதிக இரும்புச்சத்து கொண்டது. நல்ல நீர் வடிகால் வசதி உள்ளது, சீரான நீர்ப்பாசனம் தேவை.</span>
+        </p>
+      </div>
+
+      <div class="bg-emerald-950/60 border border-emerald-500/30 rounded-2xl p-4 flex items-center gap-4 min-w-[200px]">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs text-slate-400 block font-medium">Accuracy (துல்லியம்)</span>
+          <span class="text-2xl font-black text-emerald-300">94.7%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="glass-card rounded-3xl p-6 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="sliders" class="w-5 h-5 text-emerald-400"></i> Soil Properties (மண் தன்மைகள்)
+        </h3>
+        <div class="space-y-3">
+          <div class="p-3 bg-white/5 rounded-xl flex justify-between items-center border border-white/5">
+            <span class="text-xs text-slate-400">Water Retention (நீர் பிடிப்பு)</span>
+            <span class="text-xs font-semibold text-amber-300">Moderate (மிதமான)</span>
+          </div>
+          <div class="p-3 bg-white/5 rounded-xl flex justify-between items-center border border-white/5">
+            <span class="text-xs text-slate-400">Structure (அமைப்பு)</span>
+            <span class="text-xs font-semibold text-emerald-300">Porous (துளைகள் கொண்டது)</span>
+          </div>
+          <div class="p-3 bg-white/5 rounded-xl flex justify-between items-center border border-white/5">
+            <span class="text-xs text-slate-400">Iron Oxide (இரும்பு ஆக்ஸைடு)</span>
+            <span class="text-xs font-semibold text-emerald-300">Rich (அதிகம்)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 glass-card rounded-3xl p-6 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="wheat" class="w-5 h-5 text-emerald-400"></i> Recommended Crops (பரிந்துரைக்கப்படும் பயிர்கள்)
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <i data-lucide="nut" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-100">Groundnut</h4>
+              <span class="text-xs text-emerald-400 block font-medium">நிலக்கடலை</span>
+            </div>
+            <span class="text-[10px] text-slate-400 block border-t border-white/5 pt-2">Best for loose soil</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <i data-lucide="wheat" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-100">Pulses</h4>
+              <span class="text-xs text-emerald-400 block font-medium">பயறு வகைகள்</span>
+            </div>
+            <span class="text-[10px] text-slate-400 block border-t border-white/5 pt-2">Nitrogen fixing boost</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-100">Maize</h4>
+              <span class="text-xs text-emerald-400 block font-medium">மக்காச்சோளம்</span>
+            </div>
+            <span class="text-[10px] text-slate-400 block border-t border-white/5 pt-2">High adaptable growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+      <a href="/" class="w-full sm:w-auto py-3.5 px-8 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all">
+        <i data-lucide="upload" class="w-4 h-4"></i> Test Another Image (மற்றொரு படம்)
+      </a>
+      <button onclick="window.print()" class="w-full sm:w-auto py-3.5 px-6 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+        <i data-lucide="printer" class="w-4 h-4"></i> Export Report (அறிக்கை அச்சிடு)
+      </button>
+    </div>
+  </main>
+
+  <footer class="text-center py-6 border-t border-white/5 text-xs text-slate-400">
+    Designed for Smart Farmers • Powered by SoilSense Neural Network
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

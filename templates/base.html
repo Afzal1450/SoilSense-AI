@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Soil Type Classification{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-hover: #1b5e20;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #0f172a; }
+    .hero p { color: var(--text-muted); font-size: 1.05rem; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+    .alert-error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .upload-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 3rem;
+    }
+    .dropzone {
+      border: 2px dashed #cbd5e1;
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #fafafa;
+    }
+    .dropzone:hover { border-color: var(--primary); background: #f0fdf4; }
+    .dropzone p { color: var(--text-muted); margin-top: 0.5rem; font-size: 0.9rem; }
+    .file-input { display: none; }
+
+    .btn-submit {
+      margin-top: 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn-submit:hover { background: var(--primary-hover); }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: #0f172a;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .gallery-card .card-body { padding: 1rem; text-align: center; }
+    .gallery-card h3 { font-size: 1.05rem; color: var(--text-main); }
+
+    .result-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .result-badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: var(--primary);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="brand">🌱 SoilSense AI</a>
+  </nav>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    Made with ❤️ for Smart Agriculture
+  </footer>
+
+  <script>
+    function showFileName(input) {
+      const label = document.getElementById('file-label');
+      if (input.files && input.files[0]) {
+        label.textContent = "Selected: " + input.files[0].name;
+      }
+    }
+  </script>
+</body>
+</html>
