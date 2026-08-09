@@ -5,13 +5,3 @@ Flask==1.1.1
 h5py==2.9.0
 tensorflow==2.3.0
 pillow>=6.2.0
-import os
-import shutil
-import ssl
-from icrawler.builtin import BingImageCrawler
-from flask import Flask, render_template, request
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
-from werkzeug.utils import secure_filename
