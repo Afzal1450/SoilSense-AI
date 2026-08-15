@@ -76,13 +76,13 @@ def cleanup_file(file_path):
         os.remove(file_path)
 
 
-@app.route("/", methods=["GET","POST"])
-def index():
-    return render_template("index.html")
-
-
-@app.route("/predict", methods=["POST"])
+# Both GET and POST handled at main route '/' as well as '/predict'
+@app.route("/", methods=["GET", "POST"])
+@app.route("/predict", methods=["GET", "POST"])
 def predict():
+    if request.method == "GET":
+        return render_template("index.html")
+
     if "file" not in request.files:
         return render_template("index.html", error="No file uploaded!")
 
