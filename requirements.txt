@@ -1,6 +1,6 @@
 Flask
 gunicorn
-tensorflow
+tensorflow-cpu
 numpy
 h5py
 pillow
