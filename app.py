@@ -76,7 +76,7 @@ def cleanup_file(file_path):
         os.remove(file_path)
 
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET","POST"])
 def index():
     return render_template("index.html")
 
